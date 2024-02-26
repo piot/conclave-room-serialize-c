@@ -1,0 +1,8 @@
+CMakeFiles
+deps/piot
+CTestTestfile.cmake
+cmake_install.cmake
+src/lib/libconclave-room-serialize.a
+CMakeCache.txt
+Makefile
+.vscode
