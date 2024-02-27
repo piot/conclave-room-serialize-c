@@ -31,14 +31,24 @@ int clvSerializeReadUserSessionId(
     return fldInStreamReadUInt64(stream, userSessionId);
 }
 
+void clvSerializeWriteUserId(struct FldOutStream* stream, ClvSerializeUserId userId)
+{
+    fldOutStreamWriteUInt64(stream, userId);
+}
+
+int clvSerializeReadUserId(struct FldInStream* stream, ClvSerializeUserId* userId)
+{
+    return fldInStreamReadUInt64(stream, userId);
+}
+
 void clvSerializeWriteTerm(struct FldOutStream* stream, ClvSerializeTerm term)
 {
     fldOutStreamWriteMarker(stream, 0x89);
-    fldOutStreamWriteUInt64(stream, term);
+    fldOutStreamWriteUInt16(stream, term);
 }
 
 int clvSerializeReadTerm(struct FldInStream* stream, ClvSerializeTerm* term)
 {
     fldInStreamCheckMarker(stream, 0x89);
-    return fldInStreamReadUInt64(stream, term);
+    return fldInStreamReadUInt16(stream, term);
 }

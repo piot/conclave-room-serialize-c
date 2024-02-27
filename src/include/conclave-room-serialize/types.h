@@ -10,7 +10,7 @@
 
 typedef uint64_t ClvSerializeUserId;
 typedef uint64_t ClvSerializeUserSessionId;
-typedef uint64_t ClvSerializeTerm;
+typedef uint16_t ClvSerializeTerm;
 typedef uint64_t ClvSerializeKnowledge;
 
 typedef enum ClvSerializeConnectedToOwnerState {

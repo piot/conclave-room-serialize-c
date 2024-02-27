@@ -14,6 +14,6 @@ int clvRoomSerializeClientOutPing(struct FldOutStream* stream, const ClvSerializ
     clvRoomSerializeWriteCommand(stream, clvRoomSerializeCmdPing, COMMAND_DEBUG);
    // clvSerializeWriteUserSessionId(stream, userSessionId);
     clvSerializeWriteTerm(stream, ping->term);
-    fldOutStreamWriteUInt8(stream, (uint8_t)ping->connectedToOwner);
-    return fldOutStreamWriteUInt64(stream, ping->knowledge);
+    fldOutStreamWriteUInt64(stream, ping->knowledge);
+    return fldOutStreamWriteUInt8(stream, (uint8_t)ping->connectedToOwner);
 }

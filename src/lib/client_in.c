@@ -18,7 +18,8 @@ int clvRoomSerializeClientInPingResponse(FldInStream* stream, ClvSerializePingRe
 
     for (size_t i = 0; i < memberCount; ++i) {
         ClvSerializeUserId* userId = &pingResponse->roomInfo.members[i];
-
+        uint8_t connectionIndex;
+        fldInStreamReadUInt8(stream, &connectionIndex);
         clvSerializeReadUserId(stream, userId);
     }
 

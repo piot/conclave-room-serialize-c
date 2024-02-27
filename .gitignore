@@ -6,3 +6,4 @@ src/lib/libconclave-room-serialize.a
 CMakeCache.txt
 Makefile
 .vscode
+Testing/Temporary
