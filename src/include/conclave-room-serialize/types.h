@@ -29,9 +29,15 @@ typedef struct ClvSerializeRoomWithMembersInfo {
     uint8_t indexOfOwner;
 } ClvSerializeRoomWithMembersInfo;
 
-typedef struct ClvSerializePingResponseOptions {
+typedef struct ClvSerializePingResponse {
     ClvSerializeTerm term;
     ClvSerializeRoomWithMembersInfo roomInfo;
-} ClvSerializePingResponseOptions;
+} ClvSerializePingResponse;
+
+typedef struct ClvSerializePing {
+    ClvSerializeKnowledge knowledge;
+    ClvSerializeTerm term;
+    ClvSerializeConnectedToOwnerState connectedToOwner;
+} ClvSerializePing;
 
 #endif

@@ -12,7 +12,6 @@
 
 struct FldOutStream;
 
-int clvRoomSerializeClientOutPing(struct FldOutStream* stream, ClvSerializeUserSessionId userSessionId,
-    ClvSerializeKnowledge knowledge, ClvSerializeTerm term, ClvSerializeConnectedToOwnerState connectedToOwner);
+int clvRoomSerializeClientOutPing(struct FldOutStream* stream, const ClvSerializePing* ping);
 
 #endif

@@ -14,6 +14,6 @@ struct FldInStream;
 struct ImprintAllocator;
 
 int clvRoomSerializeClientInPingResponse(
-    struct FldInStream* stream, ClvSerializePingResponseOptions* options);
+    struct FldInStream* stream, ClvSerializePingResponse* pingResponse);
 
 #endif

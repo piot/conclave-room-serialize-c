@@ -4,4 +4,4 @@
 
 # Conclave Room Serialize Library
 
-Functions to serialize commands for the [conclave protocol](docs/index.adoc) when already joined a room.
+Functions to serialize commands for the [conclave protocol](https://github.com/piot/conclave-serialize-c/blob/main/docs/index.adoc) when already joined a room.

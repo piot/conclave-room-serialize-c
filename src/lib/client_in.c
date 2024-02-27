@@ -8,19 +8,19 @@
 #include <imprint/allocator.h>
 #include <tiny-libc/tiny_libc.h>
 
-int clvRoomSerializeClientInPingResponse(FldInStream* stream, ClvSerializePingResponseOptions* options)
+int clvRoomSerializeClientInPingResponse(FldInStream* stream, ClvSerializePingResponse* pingResponse)
 {
-    clvSerializeReadTerm(stream, &options->term);
+    clvSerializeReadTerm(stream, &pingResponse->term);
 
     uint8_t memberCount;
     fldInStreamReadUInt8(stream, &memberCount);
-    options->roomInfo.memberCount = memberCount;
+    pingResponse->roomInfo.memberCount = memberCount;
 
     for (size_t i = 0; i < memberCount; ++i) {
-        ClvSerializeUserId* userId = &options->roomInfo.members[i];
+        ClvSerializeUserId* userId = &pingResponse->roomInfo.members[i];
 
         clvSerializeReadUserId(stream, userId);
     }
 
-    return fldInStreamReadUInt8(stream, &options->roomInfo.indexOfOwner);
+    return fldInStreamReadUInt8(stream, &pingResponse->roomInfo.indexOfOwner);
 }

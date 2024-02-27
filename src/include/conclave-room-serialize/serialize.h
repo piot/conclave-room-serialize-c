@@ -17,6 +17,7 @@ void clvRoomSerializeWriteCommand(struct FldOutStream* outStream, uint8_t cmd, c
 
 void clvSerializeWriteTerm(struct FldOutStream* stream, ClvSerializeTerm term);
 int clvSerializeReadTerm(struct FldInStream* stream, ClvSerializeTerm* term);
+
 void clvSerializeWriteUserSessionId(
     struct FldOutStream* stream, ClvSerializeUserSessionId userSessionId);
 int clvSerializeReadUserSessionId(
